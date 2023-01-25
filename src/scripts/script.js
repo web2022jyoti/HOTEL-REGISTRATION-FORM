@@ -423,8 +423,8 @@ function ViewDetailsClick(){
         var landscape = window.matchMedia("screen and (orientation:landscape)");
         var portrait = window.matchMedia("screen and (orientation:portrait)");
 
-        var landscapeImage = ["public/image/urban11.jpg","public/image/urban22.jpg",
-        "public/image/urban33.jpg","public/image/urban44.jpg","public/image/urban55.jpg"]
+        var landscapeImage = ["../public/image/urban11.jpg","../public/image/urban22.jpg",
+        "../public/image/urban33.jpg","../public/image/urban44.jpg","../public/image/urban55.jpg"]
         
         // Loads the images one at a time, then calls the callback function when all images
         // have been loaded

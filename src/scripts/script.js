@@ -445,8 +445,8 @@ function ViewDetailsClick(){
 
 
         
-        var portraitImage = ["../public/image/urban66.jpg","../public/image/urban77.jpg",
-        "../public/image/urban88.jpg","../public/image/urban99.jpeg","../public/image/urban100.jpg"]
+        var portraitImage = ["public/image/urban66.jpg","public/image/urban77.jpg",
+        "public/image/urban88.jpg","public/image/urban99.jpeg","public/image/urban100.jpg"]
         
         // Loads the images one at a time, then calls the callback function when all images
         // have been loaded

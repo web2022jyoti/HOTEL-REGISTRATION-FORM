@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOTEL REGISTRATION FORM</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body onload="bodyload()">
+    <div id="preloader"></div>
+    <header> 
+        <div class="heading">
+                Urban Hotel
+        </div>
+        <div id="book-room-link">
+            <a href="javascript:BookRoomClick()" class="book-room-link">Book Room</a>
+        </div>
+        <div id="view-details-link">
+            <a href="javascript:ViewDetailsClick()" class="view-details-link">View Details</a>
+        </div>
+    </header>
+    <main class="slider" id="slider">
+        <div class="bg-blur">
+            <div class="caption">
+                <div>
+                    <h2>Urban Hotel</h2>
+                    <p>We know that you belong in this atmosphere.<br> So we built this hotel for you.<br>
+                        
+                        Stay with us and enjoy the luxuries meant for royalty alone.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section>
+        <div class="reg-form">
+            <div class="take-to-center">
+                <div class="flex-the-content">
+                    <div>
+                        <dt style="background-color:black;color:white;font-size:1.5rem;text-align:center;padding:8px;border-radius:5px;">Booking Form</dt>
+                        <dl class="customer-details">
+                            <dt>Customer Name</dt>
+                            <dd>
+                                <input type="text" id="name-input" placeholder="First Name" maxlength="30" onblur="NameVerify()">
+                                <p id="name-msg"></p>
+                            </dd>
+                            <dt>Total No of Person</dt>
+                            <dd>
+                                <input type="number" id="person-input" placeholder="Max 5 person" min="1" max="5" onblur="PersonVerify()">
+                                <p id="person-msg"></p>
+                            </dd>
+                            <dt>Check In-Date</dt>
+                            <dd>
+                                <input type="date" id="in-date-input" onblur="DateVerify()">
+                                <p id="in-date-msg"></p>
+                            </dd>
+                            <dt>Total No of Days</dt>
+                            <dd>
+                                <input type="number" id="total-days-input" placeholder="Max 30 days" min="1" max="30" onblur="DayVerify()">
+                                <p id="total-days-msg"></p>
+                            </dd>
+                            <dt>Advance Amount</dt>
+                            <dd>
+                                <input type="number" id="advance-amount-input" placeholder="Min-1000 Max-2400" min="1000" max="2400" onblur="AmountVerify()">
+                                <p id="advance-amount-msg"></p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div>
+                        <div style="color:blue;font-weight: bold;margin-top: 5px;">
+                            Select Room Type
+                        </div>
+                        <div class="room-type">
+                            
+                            <div class="delux-room" id="delux-room">
+                                <dt style="font-weight: bold;">Delux Room</dt>
+                                    <img src="./public/image/urban101.jpg" width="150vw" height="150vh" border="2" id="delux-room-img" onclick="DeluxRoomClick()">
+                                <dt style="font-weight: bold;">&#8377; 2500</dt>
+                            </div>
+                            <div class="suite-room" id="suite-room">
+                                <dt style="font-weight: bold;">Suite Room</dt>
+                                    <img src="./public/image/urban102.jpg" width="150vw" height="150vh" border="2" id="suite-room-img" onclick="SuiteRoomClick()">
+                                <dt style="font-weight: bold;">&#8377; 4000</dt>
+                            </div>
+                        </div>
+
+                        <div style="color:blue;font-weight: bold;margin-top:5px;">
+                            Select Amenities
+                        </div>
+                        <div class="select-amenities">
+
+                            <div class="ac-room" id="ac-room">
+                                <dt style="font-weight: bold;">A/C</dt>
+                                    <img src="./public/image/urban104.jpeg" width="150vw" height="150vh" border="2" id="ac-room-img" onclick="AcClick()">
+                                <dt style="font-weight: bold;">&#8377; 1000</dt>
+                            </div>
+                            <div class="locker-room" id="locker-room">
+                                <dt style="font-weight: bold;">Locker</dt>
+                                    <img src="./public/image/urban103.jpg" width="150vw" height="150vh" border="2" id="locker-room-img" onclick="LockerClick()">
+                                <dt style="font-weight: bold;">&#8377; 300</dt>
+                            </div>
+                        </div>  
+                    </div>
+                    <button class="register-button" onclick="RegisterClick()">Book Room</button>
+                    <button class="cancel-button" onclick="CancelClick()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="view-details-container" id="view-details-container">
+        <div class="detail-container-blur">
+            <div class="take-to-center">
+                <fieldset>
+                    <legend>Urban Hotel Bill</legend>
+                    <dl class="bill-data">
+                        <dt>Customer Name:</dt>
+                        <dd style="word-break:break-all;" id="customer-name-data"></dd>
+                        <dd>----</dd>
+    
+                        <dt>Check In-Date:</dt>
+                        <dd id="in-date-data"></dd>
+                        <dd>----</dd>
+
+                        <dt>Total No of Days:</dt>
+                        <dd id="total-days-data"></dd>
+                        <dd>----</dd>
+    
+                        <dt>Total No of Person:</dt>
+                        <dd id="total-person-data"></dd>
+                        <dd id="total-person-amount-data"></dd>
+    
+                        <dt>Room Type:</dt>
+                        <dd id="room-type-data"></dd>
+                        <dd id="room-type-amount-data"></dd>
+    
+                        <dt>Amenities:</dt>
+                        <dd id="amenities-type-data"> </dd>
+                        <dd id="amenities-type-amount-data"> <hr></dd>
+    
+                        <dt>Gross Amount</dt>
+                        <dd>----</dd>
+                        <dd id="gross-amount-data"></dd>
+    
+                        <dt>Advance Amount</dt>
+                        <dd>----</dd>
+                        <dd id="advance-amount-data"> <hr></dd>
+    
+                        <dt>You Have to Pay</dt>
+                        <dd>---- </dd>
+                        <dd id="extra-pay-data"> <hr></dd>
+                    </dl>
+                    <button class="print-button" onclick="PrintClick()">Print Bill</button>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="copyright-logo">&copy;Urban-hotel</div>
+            <div class="contact">
+                <ol>
+                    <li class="footer-title">Contact</li>
+                    <li>Email: 
+                        <a href="mailto:web2022jyoti@gmail.com">web2022jyoti@gmail.com</a>
+                    </li>
+                    <li>Phone: 
+                        <a href="tel:+917022039906">+917022039906</a>
+                    </li>
+                </ol>
+            </div>
+            <div class="address">
+                <ol>
+                    <li class="footer-title">Address</li>
+                    <li>urban hotel</li>
+                    <li>13SRT, 6th Lane,CRPF Colony,</li>
+                    <li>Sanjeeva Reddy Nagar</li>
+                    <li>Bangalore, karnataka 500338</li>
+                    <li>India</li>
+                </ol>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
+    <script src="./src/scripts/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,408 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+/* ------------------------------------------------------------------------ */
+/* header style */
+header{
+    display: flex;
+    justify-content:space-between;
+    padding:0.5rem;
+    box-shadow: 5px 5px 15px black;
+}
+.heading{
+    font-size: 1.8rem;
+}
+.book-room-link{
+    display: inline-block;
+    text-decoration: none;
+    color:black;
+    font-size: 1.2rem;
+    border:2px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    
+}
+.book-room-link:hover{
+    background-color: black;
+    color:white;
+}
+
+
+.view-details-link{
+    display: inline-block;
+    text-decoration: none;
+    color:black;
+    font-size: 1.2rem;
+    border:2px solid black;
+    padding: 5px;
+    border-radius: 5px;
+}
+.view-details-link:hover{
+    background-color: black;
+    color:white;
+}
+#view-details-link{
+    display: none;
+}
+/* ----------------------------------------------------------------------- */
+/* main style */
+
+.slider{
+    height: 90vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.bg-blur{
+    background-image: linear-gradient(180deg,rgba(102, 0, 2, 0.751),rgba(0, 0, 0, 0.672),rgba(0, 0, 0, 0.516),rgba(98, 207, 24, 0.664));
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* ----------------------------------------------------------------------- */
+/* Footer Style */
+
+.footer-container{
+    font-family: 'arial';
+    background-color: white;
+    color:black; 
+    box-shadow: 5px 5px 15px black;
+    font-size: 1rem; 
+    padding-top: 50px;
+}
+.copyright-logo{
+    font-size: 1.8rem;
+    padding: 1rem;
+}
+.contact{
+    padding-bottom: 1.2rem;
+}
+footer ol{
+    margin: 0px;
+}
+footer li{
+    padding-left: 0px;
+    margin-left: 0px;
+}
+.address{
+    padding-bottom: 1.2rem;
+}
+.footer-container a{
+    text-decoration: none;
+    color:black;
+}
+.header-container a{
+    text-decoration: none;
+    color:black;
+}
+.footer-container ol{
+    list-style: none;
+}
+.footer-title{
+    font-size: 1.5rem;
+}
+footer li{
+    margin-bottom: 0.8rem;
+}
+/* ----------------------------------------------------------------------- */
+/* section work */
+section{
+    display: none;
+    background-image: url(../public/image/urban1.avif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+}
+.reg-form{
+    background-color: rgba(1,1,1,0.5);
+    width:100%;
+    height: 100vh;
+}
+.take-to-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.flex-the-content{
+    background-color: rgba(253, 253, 253, 0.7);
+    padding: 20px;
+    overflow: auto;
+    height: 90vh;
+    margin-top: 10px;
+}
+.room-type{
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap:3px;
+}
+
+.select-amenities{
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap:3px;
+}
+.customer-details{
+    padding-right: 10px;
+}
+.customer-details dd{
+    margin-left: 0px;
+}
+.customer-details dt{
+    color:blue;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+.customer-details input{
+    width:100%;
+    font-size: large;
+    padding: 5px;
+    border:none;
+    background-color: transparent;
+    border-bottom:2px solid black ;
+}
+.customer-details input:focus{
+    border:none;
+    box-shadow: 1px 1px 10px brown;
+    
+}
+.register-button{
+    width:100%;
+    font-size: 1rem;
+    padding:10px;
+    margin-bottom: 10px;
+    margin-top:10px;
+    border:none;
+    background-color: blue;
+    color:white;
+    border-radius: 5px;
+}
+.cancel-button{
+    width:100%;
+    font-size: 1rem;
+    padding:10px;
+    border:none;
+    background-color: brown;
+    color:white;
+    border-radius: 5px;
+}
+.register-button:hover, .cancel-button:hover{
+    cursor: pointer;
+}
+.delux-room{
+    padding: 5px;
+}
+.suite-room{
+    padding:5px;  
+}
+.ac-room{
+    padding:5px;
+}
+.locker-room{
+    padding:5px;
+}
+.room-type img:hover, .select-amenities img:hover{
+    cursor:pointer;
+}
+
+/* ----------------------------------------------------------------------- */
+@media screen and (orientation:landscape) {
+    
+    /* footer design */
+    .footer-container{
+        display: grid;
+        grid-template-columns: 6fr 3fr 3fr;
+        font-size: 1rem; 
+        padding-top: 100px;
+    }
+    .copyright-logo{
+        font-size: 1.8rem;
+        text-align: right;
+        padding: 1rem;
+    }
+    .contact{
+        border-left: 5px solid gray;
+        padding-bottom: 1.2rem;
+    }
+}
+
+@media screen and (orientation:portrait){
+    /* footer desing */
+    .footer-title{
+        font-size: 1.5rem;
+        border-bottom: 0.5rem double red;
+        border-top: 0.5rem double red;
+        border-top-right-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        border-radius: 2rem;
+        padding-left: 1rem;
+    }
+
+    section{
+        display: none;
+        background-image: url(../public/image/urban2.avif);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100vh;
+    }
+}
+
+
+
+/* Bill Generate Div work */
+.view-details-container{
+    display: none;
+    background-image: url(../public/image/urban3.avif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+.detail-container-blur{
+    background-color: rgba(1,1,1,0.7);
+    width:100%;
+    height: 100vh;
+}
+fieldset{
+    background-color: rgba(155, 112, 112, 0.7);
+    padding: 20px;
+    overflow: auto;
+    margin-top: 10px;
+    border:5px double white;
+    margin-top:30px;
+}
+fieldset legend{
+    background-color: yellowgreen;
+    padding:5px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    color:black;
+}
+.bill-data{
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+    margin:0px;
+}
+
+.bill-data dt{
+    margin-bottom: 10px;
+}
+
+fieldset button{
+    width:100%;
+    font-size: 1rem;
+    padding:10px;
+    margin-bottom: 10px;
+    margin-top:10px;
+    border:none;
+    background-color: yellowgreen;
+    color:black;
+    border-radius: 5px;
+}
+
+fieldset button:hover{
+    cursor: pointer;
+}
+
+@media print{
+    fieldset{
+        border:10px double black;
+    }
+    legend{
+        border:2px solid black;
+        padding:5px;
+    }
+    header,main,section,footer{
+        display: none;
+    }
+    .view-details-container{
+        display: block;
+    }
+
+}
+
+#preloader{
+    background: black url(../public/image/loading-buffering.gif) no-repeat center center;
+    background-size: 15%;
+    color:white;
+    margin: 0px;
+    height: 100vh;
+    width:100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.caption{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+.caption h2{
+    text-align: center;
+    letter-spacing: 5px;
+    color:transparent;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: white;
+    font-variant: small-caps;
+}
+@media  screen and (orientation:landscape) {
+    .caption h2{
+        font-size: 5rem;
+        margin:0px;
+        
+    }
+    .caption p{
+        font-size: 1.8rem;
+        word-spacing: 10px;
+        letter-spacing: 5px;
+        margin-top:0px;
+    }
+    .caption div{
+        margin-top:20vh;
+    }
+}
+
+@media screen and (orientation:portrait) {
+    .caption h2{
+        font-size: 2rem;
+        /* text-decoration: overline dotted; */
+        border: 3px inset white;
+        box-shadow: 2px 2px 5px white;
+        width:40vh;
+        margin:auto;
+        margin-bottom: 15px;
+    }
+    .caption p{
+        font-size: 1rem;
+    }
+    .caption div{
+        margin-top:25vh;
+    }
+}
+
+.caption p{
+    margin:0px;
+    word-spacing: 5px;
+    text-shadow: 1px 1px 2px black;
+    text-align: center; 
+    line-height: 40px;
+    font-variant: small-caps;
+}
+
+body{
+    margin:0px;
+}
